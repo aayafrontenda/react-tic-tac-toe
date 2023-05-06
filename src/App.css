@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+body {
+  background: rgba(173, 255, 47, 0.7);
+  margin: 0;
+  padding: 0;
+  font-family: 'inconsolata', monospace;
+}
+
+.game-grid {
+  display: grid;
+  margin-top: 0.3rem;
+  grid-template-columns: repeat(3, 5rem);
+  grid-template-rows: repeat(3, 5rem);
+  justify-content: center;
+  gap: 10px;
+}
+
+.vertically-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-grid > button {
+  cursor: pointer;
+  font-size: 2rem; 
+  border: 1px solid white;
+  border-radius: 0rem;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.App > button {
+  cursor: pointer;
+  font-size: 1rem; 
+  border-radius: 0rem;
+  outline: none;
+  background-color: rgba(232, 88, 88, 0.8);
+}
+
+.game-grid > button:focus, .App > button:focus {
+  outline: none;
+}
+
+.App > button:hover {
+  border: 1px solid rgba(69, 116, 0, 0.1);
+  background-color: rgba(0, 255, 127, 0.5);
+  outline: none;
+}
+
+.game-grid > button:hover {
+  border: 1px solid rgba(69, 116, 0, 0.1);
+  background-color: rgba(0, 255, 127, 0.5);
+  outline: none;
+}
+
+.game-grid > button:disabled:hover {
+  border: 1px solid rgba(69, 116, 0, 0.1);
+  background-color: rgba(128, 128, 128, 0.5);
+}
