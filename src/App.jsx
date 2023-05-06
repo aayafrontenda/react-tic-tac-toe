@@ -2,7 +2,7 @@ import { useState, useRef } from 'react'
 import './App.css'
 
 function App() {
-  const [move, setMove] = useState('◯');
+  const [move, setMove] = useState(['◯', '✕'][Math.floor(Math.random() * (2))]);
   const [gameOver, setGameOver] = useState(false);
 
   const [gameGrid, setGameGrid] = useState([
